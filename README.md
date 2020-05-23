@@ -1,4 +1,7 @@
 # Giant
 
-Склонировать репозиторий и выполнить npm install
+Склонировать репозиторий 
+npm install
+gulp
 
+https://mouset.github.io/giant-build/
