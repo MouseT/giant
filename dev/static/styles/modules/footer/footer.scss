@@ -1,0 +1,25 @@
+.footer { 
+    flex: 0 0 auto;
+    background: $black;
+    text-align: center;
+    padding: 60px 0;
+    
+    &__icons {
+        margin-bottom: 30px;
+
+        & i {
+            font-size: 16px;
+            color: $white;
+            margin: 0 15px;
+
+            &:hover {
+                color: #f31f79;
+            }
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-weight: 300;
+    }
+}

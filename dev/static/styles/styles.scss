@@ -1,0 +1,141 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+@include sprites($spritesheet-sprites);
+
+html {
+  font-family: 'Roboto', Arial, serif;
+  font-size: $base-font-size;
+  color: $font-color;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section { position: relative; }
+
+input,
+select,
+button { outline: none; }
+
+.hidden {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content { 
+  flex: 1 0 auto;
+  margin-top: 113px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $content;
+  padding: 0 30px;
+}
+
+.slick-prev {
+  position: absolute;
+  background: $white url(../images/content/left.png) no-repeat center center;
+  z-index: 9;
+  top: 58%;
+  left: -65px;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+
+  &:hover {
+    background: url(../images/content/left-hover.png) no-repeat center center,
+      linear-gradient(to right, $gradient-orange 0%, $gradient-pink 100%);
+      box-shadow: 0 0 0 3px #0000001a;
+  }
+
+  @include screen ($desktop) {
+    left: 0;
+  }
+
+  @include screen ($desktop) {
+    left: -22px;
+  }
+}
+
+.slick-next {
+  position: absolute;
+  background: $white url(../images/content/right.png) no-repeat center center;
+  z-index: 9;
+  top: 58%;
+  right: -65px;
+  padding: 13px;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+
+  &:hover {
+    background: url(../images/content/right-hover.png) no-repeat center center,
+      linear-gradient(to right, $gradient-orange 0%, $gradient-pink 100%);
+    box-shadow: 0 0 0 3px #0000001a;
+  }
+
+  @include screen ($desktop) {
+    right: 0;
+  }
+  
+  @include screen ($desktop) {
+    right: -22px;
+  }
+
+
+}
+
+//Модули
+@import "modules/modules";

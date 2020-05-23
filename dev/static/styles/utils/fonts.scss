@@ -1,0 +1,18 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url(#{$path}.woff) format("woff"),
+      url(#{$path}.eot) format("eot"),
+      url(#{$path}.ttf) format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include font-face('Roboto', '../fonts/roboto/Roboto-Light', 300, 'normal');
+@include font-face('Roboto', '../fonts/roboto/Roboto-Regular', 400, 'normal');
+@include font-face('Roboto', '../fonts/roboto/Roboto-Medium', 500, 'normal');
+@include font-face('Dosis', '../fonts/dosis/Dosis-Regular', 400, 'normal');
+@include font-face('Dosis', '../fonts/dosis/Dosis-Medium', 500, 'normal');
+@include font-face('Dosis', '../fonts/dosis/Dosis-SemiBold', 600, 'normal');
+@include font-face('Dosis', '../fonts/dosis/Dosis-Bold', 700, 'normal');

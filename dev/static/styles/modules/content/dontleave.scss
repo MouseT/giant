@@ -1,0 +1,72 @@
+.dontleave {
+    padding: 170px 0;
+    background: url('../images/content/dontleave-iphone.png') left top no-repeat;
+
+    @include screen ($large) {
+        background-position: -200px 0;
+    }
+
+    @include screen ($desktop) {
+        background-size: auto 85%;
+    }
+
+    @include screen ($tablet) {
+        background-size: auto 60%;
+        background-position: -200px center;
+    }
+
+    @include screen ($phone) {
+        background: none;
+        padding: 0 0 70px;
+    }
+
+    &__box {        
+        display: flex;
+    }
+
+    &__info {
+        flex-basis: 515px;
+        margin-left: auto;
+        margin-right: 45px;
+
+        @include screen ($tablet) {
+            margin-right: 0;
+            flex-basis: 400px;
+        }
+
+        @include screen ($phone) {
+            flex-basis: 100%;
+        }
+    }
+
+    &__title {
+        font-family: 'Dosis';
+        font-weight: 500;
+        font-size: 34px;
+        padding-bottom: 35px;
+        color: $black;
+    }
+
+    &__description {
+        font-weight: 300;
+        padding-bottom: 85px;
+    }
+
+    &__text {
+        font-weight: 300;
+        padding-bottom: 40px;
+    }
+
+    &__item {
+        padding-left: 35px;
+        padding-bottom: 20px;
+        position: relative;
+
+        &::before {
+            content: url(../images/content/dontleave-bullet.png);
+            top: 3px;
+            left: 0;
+            position: absolute;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.video {
+    height: 400px;
+    position: relative;
+
+    & .videofile {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 75px;
+        height: 75px;
+        background: url(../images/content/play-button.png);
+        transform: translate(-50%,-50%);
+        border: none;
+        cursor: pointer;
+    }
+}

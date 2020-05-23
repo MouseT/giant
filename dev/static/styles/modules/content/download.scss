@@ -1,0 +1,70 @@
+.download {
+    background: linear-gradient(to right, $gradient-orange 0%, $gradient-pink 100%);
+    padding: 120px 0;
+
+    &__title {
+        color: $white;
+        font-family: 'Dosis';
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include screen ($desktop) {
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        flex-basis: 360px;
+        background: $white;
+        display: flex;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-bottom: 30px;
+
+        &:hover .download__img {
+            background: linear-gradient(to right, $gradient-orange 0%, $gradient-pink 100%);
+        }
+
+        @include screen ($desktop) {
+            margin: 0 15px 30px; 
+        }
+
+        @include screen ($phone) {
+            margin: 0 0 30px; 
+        }
+    }
+
+    &__img {
+        background: #777;
+        border-radius: 5px;
+    }
+
+    &__text {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include screen ($small) {
+            padding: 0 10px; 
+        }
+    }
+
+    &__name {
+        font-family: 'Dosis';
+        font-size: 30px;
+        font-weight: 500;
+        color: $black; 
+    }
+
+    &__description {
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "dev/static/js/main.js"
+      ],
+      "extends": [
+        "standard"
+      ],
+      "env": {
+        "jquery": true
+      }   
+    }
+  ]
+}

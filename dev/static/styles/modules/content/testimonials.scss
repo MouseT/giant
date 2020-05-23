@@ -1,0 +1,69 @@
+.testimonials {
+    padding: 120px 0;
+
+    &__title {
+        font-family: 'Dosis';
+        font-size: 36px;
+        font-weight: 500;
+        color: $black;
+        padding-bottom: 30px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__description {
+        font-weight: 300;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 660px;
+    }
+
+    &__gallery {
+        padding-top: 85px;
+    }
+
+    &__item {
+        background: #f7fafc;
+        padding: 40px;
+        margin: 30px 15px;
+        outline: none;
+
+        &:hover {
+            background: $white;
+            box-shadow: 0 10px 30px #0000001a;
+        }
+        
+        @include screen ($desktop) {
+            margin: 30px 60px;
+        }
+
+        @include screen ($small) {
+            margin: 30px 20px;
+            padding: 20px;
+        }
+    }
+
+    &__info {
+        font-weight: 300;
+        padding-bottom: 30px;
+    }
+
+    &__person {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        margin-right: 20px;
+    }
+
+    &__name {
+        font-family: 'Dosis';
+        font-size: 18px;
+        color: $black;
+    }
+
+    &__company {
+        font-weight: 300;
+    }
+}
